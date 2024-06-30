@@ -1,0 +1,21 @@
+.getSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+button.button {
+    width: 120px; 
+    border: none;
+    cursor: pointer;
+}
+
+.cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29px;
+    height: 537px;
+    width: 100%;
+}
