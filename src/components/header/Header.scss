@@ -1,0 +1,24 @@
+@import '../../variables.scss';
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+}
+
+.container {
+    width: $desctop-width;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+}

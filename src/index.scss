@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+*,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+}
+
+h1 {
+    font-family: $font-family;
+    font-size: $heading-font-size;
+    line-height: $heading-line-height;
+    color: #000;
+    font-weight: 400;
+}
+
+p {
+    font-family: $font-family;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    color: #000;
+    font-weight: 400;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    font-family: $font-family;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    width: 100px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.button {
+    font-family: $font-family;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    background-color: $main-color;
+    padding: 4px 0;
+    border-radius: 80px;
+    transition: 0.3s ease-in-out;
+    // width: 100px;
+    &:hover {
+        background-color: $main-color-hover;
+    }
+}
