@@ -9,10 +9,10 @@
 .input__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 28px;
 }
 
-.phoneSignature {
+.input__hint {
     font-size: 12px;
     line-height: 14px;
     margin: 4px 0 0px 16px;
@@ -22,15 +22,29 @@
 .singleInput {
     &__container {
         position: relative;
+        &.invalid {
+            > input {
+                outline: 2px solid $error-color;
+                outline-offset: -2px;
+            }
+            > .singleInput__label.input__fieled {
+                color: $error-color;
+            }
+            > label {
+                color: $error-color;
+            }
+        }
     }
     &__label {
         position: absolute;
         padding: 0 4px;
         left: 11px;
         top: 16px;
-        background-color: $background-color;
+        background-color: transparent;
         color: $form-text-color;
         transition: 0.2s ease-in-out;
+        user-select: none;
+        z-index: -1;
     }
 }
 
@@ -38,15 +52,24 @@ input[type="text"],
 input[type="email"],
 input[type="tel"] {
     &:focus + .singleInput__label {
+        z-index: 3;
         top: -8px;
         font-size: 12px;
         color: $form-text-color;
+        background-color: $background-color;
     }
+}
+
+.input__fieled {
+    z-index: 3;
+    top: -8px;
+    font-size: 12px;
+    background-color: $background-color;
 }
 
 .radio {
     &__wrapper {
-        margin-top: 25px;
+        margin-top: 20px;
         > legend {
             margin-bottom: 11px;
             line-height: $paragraph-line-height;
@@ -103,7 +126,22 @@ input[type="radio"] {
     outline: 1px solid $form-border-color;
     outline-offset: -1px;
     border-radius: 4px;
-    margin: 47px 0 50px 0;
+    margin-top: 47px;
+    & ~ label {
+        margin-bottom: 32px
+    }
+    &.invalid {
+        outline: 2px solid $error-color;
+        outline-offset: -2px;
+        &> .file__label {
+            outline: 2px solid $error-color;
+            outline-offset: -2px;
+        }
+        & ~ label {
+            color: $error-color;
+        }
+    }
+    
 }
 
 .file__input {
@@ -114,16 +152,22 @@ input[type="radio"] {
     z-index: 3;
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
-    outline: 1px solid rgba(0, 0, 0, 0.87);
+    outline: 1px solid $black-color;
     outline-offset: -1px;
-    color: rgba(0, 0, 0, 0.87);
+    color: $black-color;
     cursor: pointer;
     padding: 14px 15px;
     border-radius: 4px 0 0 4px;
 }
 
 .file__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 14px 16px;
     user-select: none;
     color: $form-text-color;
+    &.added {
+        color: $black-color;
+    }
 }

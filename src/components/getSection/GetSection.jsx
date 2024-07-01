@@ -6,18 +6,20 @@ import Spinner from "../spinner/Spinner";
 import { useEffect, useState } from "react";
 
 import "./GetSection.scss";
-import getUsers from "../api/getUsers";
+import getUsers from "../../api/getUsers";
 
 const GetSection = () => {
     const [employees, setEmployees] = useState([]);
     const [hidden, setHidden] = useState(false);
     const [nextLink, setNextLink] = useState("");
     const [loading, setLoading] = useState(false);
+    const [totalUsers, setTotalUsers] = useState(0);
 
     useEffect(() => {
         getUsers().then((data) => {
             setEmployees(transformToCards(data.users));
             setNextLink(data.nextLink);
+            setTotalUsers(data.totalUsers);
         });
     }, []);
 
@@ -32,12 +34,18 @@ const GetSection = () => {
     const buttonHandler = () => {
         setLoading(true);
         getUsers(nextLink).then((data) => {
-            setEmployees([...employees, ...transformToCards(data.users)]);
-            setNextLink(data.nextLink);
-            if (data.nextLink === null) {
-                setHidden(true);
+            if (data.success) {
+                setEmployees([...employees, ...transformToCards(data.users)]);
+                setNextLink(data.nextLink);
+                setTotalUsers(data.totalUsers);
+                
+                // If all users are loaded, hide the button
+                // add the number of received users to the existing users
+                if (totalUsers === employees.length + data.users.length) {
+                    setHidden(true);
+                }
             }
-            setLoading(false);
+        setLoading(false);
         });
     };
 
