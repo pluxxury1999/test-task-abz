@@ -59,12 +59,17 @@ const RegistrationForm = () => {
                 </label>
             </div>
 
-            <div class="file__wrapper">
-                <label for="file__input" class="file__label">
+            <div className="file__wrapper">
+                <label htmlFor="file__input" className="file__label">
                     Upload
                 </label>
-                <input id="file__input" type="file" class="file__input" />
-                <span class="file__text">Upload your photo</span>
+                <input
+                    id="file__input"
+                    type="file"
+                    className="file__input"
+                    accept="image/png, image/jpeg"
+                />
+                <span className="file__text">Upload your photo</span>
             </div>
 
             <input type="submit" className="button" value="Sign Up" disabled />
