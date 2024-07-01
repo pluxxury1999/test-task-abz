@@ -71,6 +71,10 @@ input {
     }
 }
 
+img {
+    pointer-events: none;
+}
+
 .button {
     font-family: $font-family;
     font-size: $paragraph-font-size;

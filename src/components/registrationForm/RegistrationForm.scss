@@ -171,3 +171,13 @@ input[type="radio"] {
         color: $black-color;
     }
 }
+
+
+.success {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+}

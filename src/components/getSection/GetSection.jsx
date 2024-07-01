@@ -8,12 +8,13 @@ import { useEffect, useState } from "react";
 import "./GetSection.scss";
 import getUsers from "../../api/getUsers";
 
-const GetSection = () => {
+const GetSection = ({ newUserId }) => {
     const [employees, setEmployees] = useState([]);
     const [hidden, setHidden] = useState(false);
     const [nextLink, setNextLink] = useState("");
     const [loading, setLoading] = useState(false);
     const [totalUsers, setTotalUsers] = useState(0);
+
 
     useEffect(() => {
         getUsers().then((data) => {
@@ -21,7 +22,7 @@ const GetSection = () => {
             setNextLink(data.nextLink);
             setTotalUsers(data.totalUsers);
         });
-    }, []);
+    }, [newUserId]);
 
     const transformToCards = (employees) => {
         return employees.map((employee) => {
