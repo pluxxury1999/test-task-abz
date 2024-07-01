@@ -9,22 +9,23 @@ body {
 
 body {
     background-color: $background-color;
+    font-family: $font-family;
 }
 
 h1 {
-    font-family: $font-family;
     font-size: $heading-font-size;
     line-height: $heading-line-height;
     color: #000;
     font-weight: 400;
+    text-align: center;
 }
 
 p {
-    font-family: $font-family;
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
     color: #000;
     font-weight: 400;
+    text-align: center;
 }
 
 ul,
@@ -35,7 +36,6 @@ ol {
 }
 
 li {
-    font-family: $font-family;
     font-size: $paragraph-font-size;
     line-height: $paragraph-line-height;
     width: 100px;
@@ -48,15 +48,45 @@ a {
     color: #000;
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    font-family: $font-family;
+    font-size: $paragraph-font-size;
+    line-height: $paragraph-line-height;
+    padding: 13px 0 13px 16px;
+    border-radius: 4px;
+    border: 1px solid $form-border-color;
+    background-color: transparent;
+    &:focus {
+        outline: none;
+    }
+    &[type=submit] {
+        margin: 0 auto;
+    }
+}
+
 .button {
     font-family: $font-family;
     font-size: $paragraph-font-size;
+    font-weight: 400;
     line-height: $paragraph-line-height;
     background-color: $main-color;
     padding: 4px 0;
     border-radius: 80px;
+    border: none;
     transition: 0.3s ease-in-out;
     &:hover {
         background-color: $main-color-hover;
+    }
+    &:disabled {
+        background-color: $disabled-color;
+        color: #fff;
+        border: none;
     }
 }

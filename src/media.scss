@@ -1,0 +1,72 @@
+@import 'variables.scss'; 
+
+// breakpoint to 1024px design
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+        max-width: $narrow-desctop-width;
+        min-width: 930px;
+        padding: 0 60px;
+    }
+    main {
+        width: 100%;
+        max-width: $narrow-desctop-width;
+        min-width: 930px;
+    }
+    .employeeCard {
+        width: 282px;
+    }
+}
+
+// breakpoint to 768px design
+
+@media (max-width: 929px) {
+    .container { 
+        width: 100%;
+        max-width: $tablet-width;
+        min-width: 500px;
+        padding: 0 60px;
+    }
+    main {
+        width: 100%;
+        max-width: 100%;
+        min-width: $tablet-width;
+    }
+    .heroSection {
+        max-height: 500px;
+    }
+    .employeeCard {
+        width: 344px;
+    }
+}
+
+// breakpoint to 360px design
+
+@media (max-width: 767px) {
+    .container { 
+        width: 100%;
+        max-width: $tablet-width;
+        min-width: $mobile-width;
+        padding: 0 16px;
+    }
+    .wrapper {
+        &> p, h1 {
+            max-width: 328px;
+        };
+    }
+    main {
+        width: 100%;
+        max-width: $tablet-width;
+        min-width: $mobile-width;
+    }
+    .employeeCard {
+        width: 328px;
+    }
+    h1 {
+        max-width: 328px;
+    }
+    .registrationForm {
+        width: 328px;
+    }
+}

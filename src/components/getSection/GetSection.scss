@@ -1,7 +1,7 @@
 .getSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     flex-direction: column;
     gap: 50px;
 }
@@ -12,10 +12,15 @@ button.button {
     cursor: pointer;
 }
 
+.employeePhoto {
+    width: 70px;
+    height: 70px;
+}
+
 .cards__wrapper {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 29px;
-    height: 537px;
     width: 100%;
 }

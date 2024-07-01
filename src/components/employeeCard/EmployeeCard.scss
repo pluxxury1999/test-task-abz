@@ -1,8 +1,12 @@
 .employeeCard {
-    min-width: 370px;
-    min-height: 254px;
+    width: 370px;
+    height: 254px;
     background-color: #fff;
     border-radius: 16px;
     text-align: center;
     padding: 20px;
+}
+
+.name {
+    margin: 20px 0;
 }

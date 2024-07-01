@@ -1,5 +1,6 @@
 import HeroSection from "../heroSection/HeroSection";
 import GetSection from "../getSection/GetSection";
+import PostSection from "../postSection/PostSection";
 
 import "./Main.scss";
 
@@ -8,6 +9,7 @@ const Main = () => {
         <main>
             <HeroSection />
             <GetSection />
+            <PostSection />
         </main>
     );
 }
