@@ -15,6 +15,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &>img {
+        width: 104px;
+        height: 26px;
+    
+    }
 }
 
 .navigation__list {
