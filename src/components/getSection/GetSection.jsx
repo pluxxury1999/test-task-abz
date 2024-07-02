@@ -21,6 +21,7 @@ const GetSection = ({ newUserId }) => {
             setEmployees(transformToCards(data.users));
             setNextLink(data.nextLink);
             setTotalUsers(data.totalUsers);
+            setHidden(false);
         });
     }, [newUserId]);
 
