@@ -238,6 +238,7 @@ const RegistrationForm = ({ setNewUserId }) => {
 
 export default RegistrationForm;
 
+// used Conditional Rendering to display the result of the registration
 const View = ({ isSuccess }) => {
     return (
         isSuccess ? (

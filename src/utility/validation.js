@@ -13,6 +13,8 @@ const validatePhone = (phone) => {
     return phoneRegex.test(phone);
   };
 
+// creating a new image object and checking its width and height via Promise
+// function awaiting promise result and returning boolean value
 const validatePhotoSize = async (photo) => {
     const validateSize = new Promise((resolve) => {
         const img = new Image();

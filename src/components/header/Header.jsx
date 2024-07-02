@@ -13,6 +13,8 @@ const Header = () => {
                         <li>
                             <a
                                 className="button"
+                                // used native querrySelector to implement smooth scrolling
+                                // probably not the best way to do it
                                 onClick={(e) => {
                                     e.preventDefault();
                                     scrollTo(document.querySelector("#users"));

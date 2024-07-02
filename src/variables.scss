@@ -1,3 +1,4 @@
+// colors
 $main-color: #f4e041;
 $main-color-hover: #FFE302;
 $secondary-color: #00bdd3;
@@ -9,14 +10,14 @@ $radio-button-color: #00BDD3;
 $error-color: #CB3D40;
 $black-color: rgba(0, 0, 0, 0.87);
 
+// font dependencies 
 $font-family: "Nunito", sans-serif;
-
 $heading-font-size: 40px;
 $heading-line-height: 40px;
-
 $paragraph-font-size: 16px;
 $paragraph-line-height: 26px;
 
+// media queries
 $desctop-width: 1170px;
 $narrow-desctop-width: 1024px;
 $tablet-width: 768px;

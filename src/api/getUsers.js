@@ -20,7 +20,7 @@ const getUsers = async (
                 success: error.response.data.success,
             };
         } else {
-            console.log(error.message);
+            throw new Error(error.message);
         }
     }
 };

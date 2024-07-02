@@ -15,7 +15,8 @@ const GetSection = ({ newUserId }) => {
     const [loading, setLoading] = useState(false);
     const [totalUsers, setTotalUsers] = useState(0);
 
-
+    // fetch users after adding a new user
+    // did not use the /users/{id} route, cause the user gets to the beginning of the database anyway
     useEffect(() => {
         getUsers().then((data) => {
             setEmployees(transformToCards(data.users));

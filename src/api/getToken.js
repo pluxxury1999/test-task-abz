@@ -8,9 +8,9 @@ const getToken = async () => {
         }
     } catch (error) {
         if (error.response) {
-            console.log(error.response.data);
+            throw new Error(error.response.data);
         } else {
-            console.log(error.message);
+            throw new Error(error.message);
         }
     }
 };
