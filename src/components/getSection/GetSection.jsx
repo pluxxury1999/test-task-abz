@@ -51,7 +51,7 @@ const GetSection = ({ newUserId }) => {
     };
 
     return (
-        <section className="getSection">
+        <section className="getSection" id="users">
             <h1>Working with GET request</h1>
             <div className="cards__wrapper">
                 {employees.length > 0 ? employees : <Spinner />}

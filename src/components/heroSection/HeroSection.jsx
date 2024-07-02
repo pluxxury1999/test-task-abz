@@ -1,5 +1,7 @@
 import "./HeroSection.scss";
 
+import scrollTo from "../../utility/scrollTo";
+
 const HeroSection = () => {
     return (
         <section className="heroSection">
@@ -13,7 +15,16 @@ const HeroSection = () => {
                     excited to learn, as the world of Front-End Development
                     keeps evolving.
                 </p>
-                <a href="#signup" className="button">Sign up</a>
+                <a
+                    onClick={(e) => {
+                        e.preventDefault();
+                        scrollTo(document.querySelector("#signUp"));
+                    }}
+                    href="#"
+                    className="button"
+                >
+                    Sign up
+                </a>
             </div>
         </section>
     );

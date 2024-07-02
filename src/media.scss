@@ -13,6 +13,10 @@
         width: 100%;
         max-width: $narrow-desctop-width;
         min-width: 930px;
+        &>.heroSection {
+            background-image: url("./resources/img/background-image1024.jpg");
+            background-size: $narrow-desctop-width;
+        }
     }
     .employeeCard {
         width: 282px;
@@ -32,10 +36,17 @@
         width: 100%;
         max-width: 100%;
         min-width: $tablet-width;
+        &>.heroSection {
+            background-image: url("./resources/img/background-image768.jpg");
+            background-size: $tablet-width;
+            max-height: 500px;
+            &>.wrapper {
+                max-width: $tablet-width;
+                
+            }
+        }
     }
-    .heroSection {
-        max-height: 500px;
-    }
+    
     .employeeCard {
         width: 344px;
     }

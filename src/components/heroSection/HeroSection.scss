@@ -5,9 +5,9 @@
     // max-width: $desctop-width;
     // min-width: 1000px;
     height: 650px;
-    background-image: url("../../resources/img/background-image.jpeg");
+    background-image: url("../../resources/img/background-image1170.jpeg");
     background-repeat: no-repeat;
-    background-size: 1550px;
+    background-size: $desctop-width;
     background-position: center bottom;
 }
 
