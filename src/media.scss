@@ -14,7 +14,7 @@
         max-width: $narrow-desctop-width;
         min-width: 930px;
         &>.heroSection {
-            background-image: url("./resources/img/background-image1024.jpg");
+            background-image: url("./resources/img/background-image1024.webp");
             background-size: $narrow-desctop-width;
         }
     }
@@ -37,7 +37,7 @@
         max-width: 100%;
         min-width: $tablet-width;
         &>.heroSection {
-            background-image: url("./resources/img/background-image768.jpg");
+            background-image: url("./resources/img/background-image768.webp");
             background-size: $tablet-width;
             max-height: 500px;
             &>.wrapper {
